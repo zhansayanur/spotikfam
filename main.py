@@ -7,7 +7,7 @@ from telebot import types
 import random
 import os
 
-bot = telebot.TeleBot(os.getenv("TELEGRAM_TOKEN"))
+bot = telebot.TeleBot(os.getenv('TELEGRAM_TOKEN'))
 price = 7.99
 people = 5
 
