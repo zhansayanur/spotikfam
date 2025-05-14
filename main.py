@@ -5,9 +5,8 @@ import requests
 from datetime import date, time
 from telebot import types
 import random
-import os
 
-bot = telebot.TeleBot(os.getenv('7169783286:AAEWb_S1zj_dkTrL-MPsGSbcU_QawgeybAc'))
+bot = telebot.TeleBot('7169783286:AAEWb_S1zj_dkTrL-MPsGSbcU_QawgeybAc')
 price = 7.99
 people = 5
 
