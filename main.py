@@ -5,14 +5,15 @@ import requests
 from datetime import date, time
 from telebot import types
 import random
+import os
 
-bot = telebot.TeleBot('7169783286:AAEWb_S1zj_dkTrL-MPsGSbcU_QawgeybAc')
+bot = telebot.TeleBot(os.getenv("TELEGRAM_TOKEN"))
 price = 7.99
 people = 5
 
 def get_usd_to_kzt():
     try:
-        url = f"http://api.exchangerate.host/live?access_key=7f2da1a2d27daa31ae571d6af7cac879&source=USD&currencies=KZT&format=1"
+        url = f"http://api.exchangerate.host/live?access_key={os.getenv('EXCHANGE_API_KEY')}&source=USD&currencies=KZT&format=1"
         response = requests.get(url)
         data = response.json()
 
